@@ -54,7 +54,7 @@ namespace corruptfile
                 winword.Quit(ref missing, ref missing, ref missing);
                 winword = null;
                 CorrupFile(filename.ToString());
-                MessageBox.Show($"Archivo creado correctamente {filename.ToString()}");
+                MessageBox.Show($"Archivo creado correctamente {filename}");
             }
             catch (Exception ex)
             {
