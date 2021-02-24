@@ -1,0 +1,20 @@
+﻿<Window x:Class="corruptfile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:corruptfile"
+        mc:Ignorable="d"
+        Title="Corrupted File Creator" Height="180" Width="320" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <DockPanel Margin="8">
+        <Button DockPanel.Dock="Bottom" Content="Crear documento dañado" Click="Button_Click"></Button>
+        <StackPanel>
+            <TextBlock>Titulo del archivo</TextBlock>
+            <TextBox Margin="0,4" x:Name="txtTitulo"></TextBox>
+            <TextBlock>Tipo de documento</TextBlock>
+            <ComboBox Margin="0,4" x:Name="cmbDoc" DisplayMemberPath="Nombre" SelectedValuePath="Name"
+                  SelectedValue="{Binding Path=Extension}" >
+            </ComboBox>
+        </StackPanel>
+    </DockPanel>
+</Window>
